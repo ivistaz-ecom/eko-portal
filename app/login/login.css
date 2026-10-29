@@ -1,0 +1,79 @@
+/* ===== Approved eKO sign-in design (EKO_Portal-v16) — copied verbatim, scoped under .login ===== */
+.login{min-height:100vh;display:flex;align-items:center;justify-content:center;padding:24px 16px;background:#f6f4f2;font-family:'Outfit','Noto Sans','Noto Sans Devanagari',system-ui,sans-serif;color:#141414;
+  --fz-grad:linear-gradient(96.24deg,rgb(245,0,2) 1.06%,rgb(253,99,16) 33.64%,rgb(180,157,115) 55.91%,rgb(107,206,127) 83.77%,rgb(106,198,205) 99.99%)}
+.login .fz{width:100%;max-width:1100px;min-height:640px;display:grid;grid-template-columns:44% 56%;background:var(--fz-grad);position:relative;isolation:isolate;border-radius:28px;overflow:hidden;box-shadow:0 30px 80px -30px rgba(120,20,10,.35)}
+.login .fz::before{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;background:linear-gradient(90deg,rgba(255,255,255,.96) 0%,rgba(255,255,255,.92) 30%,rgba(255,255,255,.7) 40%,rgba(255,255,255,.3) 50%,rgba(255,255,255,0) 62%)}
+.login .fz::after{content:"";position:absolute;inset:0;z-index:1;pointer-events:none;background:radial-gradient(ellipse 45% 60% at 22% 50%,rgba(255,255,255,.55),transparent 70%)}
+.login .fz-form{padding:56px 56px 40px;display:flex;flex-direction:column;justify-content:center;position:relative;z-index:5}
+.login .fz-logo{display:block;height:64px;width:auto;max-width:240px;object-fit:contain;margin-bottom:34px}
+.login h1{font:700 34px 'Outfit','Noto Sans','Noto Sans Devanagari',system-ui,sans-serif;letter-spacing:-.01em;color:#141414}
+.login .fz-sub{color:#6b6b6b;font-size:15px;margin:4px 0 28px}
+.login .fz-field{position:relative;margin-bottom:16px}
+.login .fz-field input{width:100%;height:56px;border:1.5px solid rgba(255,255,255,.9);background:rgba(255,255,255,.92);box-shadow:0 6px 18px -10px rgba(140,20,0,.25);border-radius:14px;padding:0 50px;font:inherit;font-size:15px;color:#141414;outline:none;transition:border-color .2s,box-shadow .2s}
+.login .fz-field input:focus{border-color:rgb(253,99,16);box-shadow:0 0 0 4px rgba(253,99,16,.15)}
+.login .fz-field .ic{position:absolute;left:18px;top:50%;transform:translateY(-50%);width:20px;height:20px;stroke:#555;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.login .fz-field .eye{position:absolute;right:16px;top:50%;transform:translateY(-50%);width:24px;height:24px;display:grid;place-items:center}
+.login .fz-btn{position:relative;width:100%;height:58px;margin-top:10px;border:0;border-radius:999px;background:var(--fz-grad);color:#fff;font:700 19px 'Outfit','Noto Sans','Noto Sans Devanagari',system-ui,sans-serif;letter-spacing:.02em;overflow:hidden;display:flex;align-items:center;justify-content:center;box-shadow:0 14px 30px -12px rgba(245,0,2,.6),inset 0 2px 0 rgba(255,255,255,.35);transition:transform .15s,box-shadow .2s}
+.login .fz-btn:hover{transform:translateY(-2px);box-shadow:0 18px 36px -12px rgba(245,0,2,.7),inset 0 2px 0 rgba(255,255,255,.35)}
+.login .fz-btn[disabled]{opacity:.8;cursor:progress}
+.login .fz-btn span{position:relative;z-index:2;text-shadow:0 1px 2px rgba(0,0,0,.25)}
+.login .fz-btn .gloss{position:absolute;inset:0 0 50% 0;background:linear-gradient(rgba(255,255,255,.28),rgba(255,255,255,0));z-index:1}
+.login .fz-btn i{position:absolute;bottom:-12px;border-radius:50%;background:rgba(255,255,255,.55);z-index:1;animation:fzrise linear infinite}
+@keyframes fzrise{0%{transform:translateY(0);opacity:0}15%{opacity:.9}100%{transform:translateY(-75px);opacity:0}}
+.login .fz-row{display:flex;justify-content:space-between;align-items:center;margin-top:20px;font-size:14px;gap:12px}
+.login .fz-row label{display:flex;align-items:center;gap:10px;color:#333;cursor:pointer}
+.login .fz-row input{width:18px;height:18px;accent-color:#e3000f}
+.login .fz-row a{color:#e3000f;font-weight:600;text-decoration:none}
+.login .fz-foot{margin-top:34px;font-size:14px;color:#6b6b6b}
+.login .fz-foot a{color:#141414;font-weight:600}
+.login .fz-art{position:relative;overflow:hidden;z-index:2;-webkit-mask-image:linear-gradient(90deg,transparent 0,#000 22%);mask-image:linear-gradient(90deg,transparent 0,#000 22%)}
+.login .fz-hero{position:absolute;z-index:2;width:122%;max-width:none;right:-6%;bottom:-3%;filter:drop-shadow(0 26px 34px rgba(60,10,0,.35));animation:fzfloat 7s ease-in-out infinite;pointer-events:none;user-select:none}
+@keyframes fzfloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
+.login .fizz{position:absolute;inset:0;z-index:3;pointer-events:none}
+.login .fizz i{position:absolute;bottom:-20px;border-radius:50%;border:1.5px solid rgba(255,255,255,.75);background:radial-gradient(circle at 35% 30%,rgba(255,255,255,.9),rgba(255,255,255,.08) 45%,transparent 70%);animation:fzob linear infinite}
+@keyframes fzob{0%{transform:translate(0,0);opacity:0}10%{opacity:1}100%{transform:translate(var(--dx),-720px);opacity:0}}
+@media (max-width:860px){
+  .login .fz{grid-template-columns:1fr;min-height:auto}
+  .login .fz-art{order:-1;height:340px;-webkit-mask-image:linear-gradient(180deg,#000 75%,transparent 100%);mask-image:linear-gradient(180deg,#000 75%,transparent 100%)}
+  .login .fz-hero{width:118%;right:6%;bottom:-10%}
+  .login .fz::before{background:linear-gradient(180deg,rgba(255,255,255,0) 0%,rgba(255,255,255,0) 26%,rgba(255,255,255,.75) 38%,rgba(255,255,255,.94) 48%,rgba(255,255,255,.96) 100%)}
+  .login .fz::after{display:none}
+  .login .fz-form{padding:36px 24px 32px}
+  .login h1{font-size:28px}
+}
+
+/* ===== Fizzy sign-in transition (from the approved design) ===== */
+.fzt{position:fixed;inset:0;z-index:600;background:linear-gradient(160deg,#F50002 0%,#FD6310 36%,#B49D73 60%,#6BCE7F 84%,#6AC6CD 100%);overflow:hidden;display:grid;place-items:center;color:#fff;pointer-events:all;will-change:clip-path,transform}
+.fzt .c{text-align:center;position:relative;z-index:2}
+.fzt .w{font:800 clamp(3.4rem,10vw,7rem)/1 'Montserrat','Noto Sans',system-ui,sans-serif;letter-spacing:-.05em;text-shadow:0 10px 34px rgba(80,0,0,.35)}
+.fzt .w b{display:inline-block;width:.26em;height:.26em;border-radius:50%;background:#fff;margin-left:.05em}
+.fzt .s{font:600 clamp(1rem,2vw,1.25rem) 'Outfit','Noto Sans','Noto Sans Devanagari',system-ui,sans-serif;margin-top:10px;opacity:.95;text-shadow:0 2px 8px rgba(0,0,0,.25)}
+.fzt i{position:absolute;bottom:-40px;border-radius:50%;border:1.5px solid rgba(255,255,255,.85);background:radial-gradient(circle at 35% 30%,rgba(255,255,255,.95),rgba(255,255,255,.14) 45%,transparent 70%)}
+.fzt .glow{position:absolute;inset:0;background:radial-gradient(600px 400px at 50% 50%,rgba(255,255,255,.28),transparent 70%)}
+
+/* ===== Additions for the live Microsoft 365 sign-in (same visual language) ===== */
+.login .fz-field input[aria-invalid="true"]{border-color:#e3000f;box-shadow:0 0 0 4px rgba(227,0,15,.12)}
+.login .fz-err{margin:-6px 4px 12px;color:#c8000a;font-size:13.5px;font-weight:500}
+.login .fz-alert{display:flex;gap:10px;align-items:flex-start;margin:0 0 18px;padding:12px 14px;border-radius:14px;background:rgba(255,255,255,.92);border:1.5px solid rgba(227,0,15,.25);font-size:14px;line-height:1.45;color:#3a0b0b;box-shadow:0 6px 18px -10px rgba(140,20,0,.25)}
+.login .fz-alert.ok{border-color:rgba(57,181,73,.35);color:#123d18}
+.login .fz-alert svg{flex:none;margin-top:1px}
+.login .fz-note{display:flex;gap:12px;align-items:center;min-height:56px;padding:10px 16px;margin-bottom:16px;border-radius:14px;background:rgba(255,255,255,.72);border:1.5px dashed rgba(253,99,16,.35);font-size:13.5px;line-height:1.4;color:#4a4a4a}
+.login .fz-note .ic{position:static;transform:none;flex:none;width:20px;height:20px;stroke:#555;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.login .fz-ms{display:flex;align-items:center;justify-content:center;gap:8px;margin-top:14px;font-size:12.5px;color:#6b6b6b}
+.login .fz-ms .sq{display:grid;grid-template-columns:7px 7px;gap:1.5px}
+.login .fz-ms .sq i{width:7px;height:7px;display:block}
+.login .fz-btn:focus-visible,.login .fz-row a:focus-visible,.login .fz-foot a:focus-visible,.login .fz-foot button:focus-visible{outline:3px solid #193ABE;outline-offset:3px}
+.login .fz-foot button{background:none;border:0;padding:0;font:inherit;color:#141414;font-weight:600;text-decoration:underline;cursor:pointer}
+.login .fz-hint{margin-top:10px;font-size:13.5px;color:#3a3a3a;background:rgba(255,255,255,.85);border-radius:12px;padding:10px 12px}
+
+/* Language step (first sign-in) reuses the same card */
+.login .lg-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin-bottom:6px}
+.login .lg{position:relative;display:flex;flex-direction:column;align-items:flex-start;gap:2px;padding:14px 16px;border-radius:14px;border:1.5px solid rgba(255,255,255,.9);background:rgba(255,255,255,.92);box-shadow:0 6px 18px -10px rgba(140,20,0,.25);cursor:pointer;text-align:left;font:inherit;color:#141414;transition:border-color .2s,box-shadow .2s,transform .15s}
+.login .lg:hover{transform:translateY(-1px)}
+.login .lg strong{font-size:17px;font-weight:600;font-family:'Outfit','Noto Sans','Noto Sans Devanagari','Noto Sans Kannada','Noto Sans Tamil','Noto Sans Malayalam','Noto Sans Telugu',sans-serif}
+.login .lg span{font-size:12.5px;color:#6b6b6b}
+.login .lg[aria-checked="true"]{border-color:rgb(253,99,16);box-shadow:0 0 0 4px rgba(253,99,16,.15)}
+.login .lg[aria-checked="true"]::after{content:"";position:absolute;top:12px;right:12px;width:10px;height:10px;border-radius:50%;background:var(--fz-grad)}
+.login .lg:focus-visible{outline:3px solid #193ABE;outline-offset:2px}
+@media (max-width:420px){.login .lg-grid{grid-template-columns:1fr}}
+@media (prefers-reduced-motion:reduce){.login .fz-hero,.login .fizz i,.login .fz-btn i{animation:none}}
